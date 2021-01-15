@@ -30,4 +30,4 @@ $ gem install rails_time_travel
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 
-![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/minitest/badge.svg)
+![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/MiniTest/badge.svg)
