@@ -1,0 +1,21 @@
+<h1>Manage#index</h1>
+
+<p>
+  <strong>Current time:</strong>
+  <h1><%= l Time.now, format: :long %></h1>
+</p>
+
+<p>
+  <%= button_to "reset", action: :set_datetime, days: "reset" %>
+  <%= button_to "-5 days", action: :set_datetime, days: 5 %>
+  <%= button_to "-15 days", action: :set_datetime, days: 15 %>
+  <%= button_to "-50 days", action: :set_datetime, days: 50 %>
+  <%= button_to "-100 days", action: :set_datetime, days: 100 %>
+  <%= button_to "-365 days", action: :set_datetime, days: 365 %>
+</p>
+
+
+<br/>
+
+session[:timecop_date] ->
+<%= debug session[:timecop_date] %>
