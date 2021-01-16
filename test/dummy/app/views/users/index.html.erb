@@ -2,11 +2,15 @@
 
 <h1>Users</h1>
 
-<table>
+<h2>Time:<%= l Time.now, format: :long %></h2>
+<h2>Active: <br/><%= User.active.to_sql %></h2>
+
+<table style="border: 1px solid #333">
   <thead>
     <tr>
       <th>Name</th>
       <th>Created</th>
+      <th>Last Change</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +19,8 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.created_at %></td>
+        <td><%= l user.created_at, format: :long %></td>
+        <td><%= l user.histories.last.created_at, format: :long rescue '-' %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

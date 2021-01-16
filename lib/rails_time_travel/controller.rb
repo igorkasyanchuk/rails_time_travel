@@ -1,5 +1,5 @@
 module RailsTimeTravel
-  module ControllerHelper
+  module Controller
     extend ActiveSupport::Concern
 
     included do

@@ -7,9 +7,13 @@
 
 <p>
   <strong>Created:</strong>
-  <%= @user.created_at %>
+  <%= l @user.created_at, format: :long %>
 </p>
 
+<p>
+  <strong>Last Change:</strong>
+  <%= l @user.histories.last.created_at, format: :long rescue '-' %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

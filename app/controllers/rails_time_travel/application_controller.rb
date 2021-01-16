@@ -1,5 +1,5 @@
 module RailsTimeTravel
   class ApplicationController < ::ApplicationController
-    include ControllerHelper
+    include RailsTimeTravel::Controller
   end
 end

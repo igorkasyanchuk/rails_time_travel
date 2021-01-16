@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     rails_time_travel (0.1.0)
-      rails (~> 6.1.1)
+      rails
       timecop
 
 GEM

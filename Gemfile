@@ -10,5 +10,3 @@ end
 
 # To use a debugger
 gem 'pry', group: [:development, :test]
-
-gem 'combustion', '~> 1.3'

@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rails time travel</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <head>
+    <title>Rails time travel</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <style>
+      <%= raw render('/rails_time_travel/shared/bulma') %>
 
-  <%= stylesheet_link_tag    "rails_time_travel/application", media: "all" %>
-</head>
-<body>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class="container main">
+      <div class="notification is-primary">
+        <div class="columns">
+          <div class="column">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+  </body>
 </html>

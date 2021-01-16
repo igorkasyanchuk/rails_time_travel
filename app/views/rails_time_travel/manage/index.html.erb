@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <%= button_to "reset", action: :set_datetime, days: "reset" %>
+  <%= button_to "reset", action: :set_datetime, days: "reset", method: :post %>
   <%= button_to "-5 days", action: :set_datetime, days: 5 %>
   <%= button_to "-15 days", action: :set_datetime, days: 15 %>
   <%= button_to "-50 days", action: :set_datetime, days: 50 %>
