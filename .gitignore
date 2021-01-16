@@ -10,4 +10,4 @@
 /test/dummy/tmp/
 .byebug_history
 
-.gem
+*.gem
