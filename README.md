@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/MiniTest/badge.svg)
 
-Time travel with timecop for your Rails development (and staring env for example).
+Time travel with `timecop` for your Rails app (in development, staging or other env).
 
 Very often you need to create objects or other things in the "past". With thins gem and excellent `timecop` gem you can freeze time to any date/time.
 
@@ -25,7 +25,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-  gem 'rails_time_travel'
+  gem 'rails_time_travel' # you can also use it on staging env or production
 end
 ```
 
@@ -41,8 +41,9 @@ This approach has all limitation which timecop has. In addition it won't work on
 
 ## TODO
 
-- jump to a specific date time with datetime picker?
+- jump to a specific datetime with datetime picker?
 - CI for Rails 4.X
+- protect with password (for example how I did in rails_performance gem)
 
 ## Credits
 
