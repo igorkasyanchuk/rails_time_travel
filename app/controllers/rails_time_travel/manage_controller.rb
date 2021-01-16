@@ -8,7 +8,7 @@ module RailsTimeTravel
     def set_datetime
       if params[:seconds] == "reset"
         Timecop.return
-        session[:timecop_date] = nil
+        session.delete(:timecop_date)
       else
         session[:timecop_date] = params[:seconds].to_i.seconds.ago
       end

@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    rails_time_travel (0.1.3)
+    rails_time_travel (0.1.4)
       rails
       timecop
 
