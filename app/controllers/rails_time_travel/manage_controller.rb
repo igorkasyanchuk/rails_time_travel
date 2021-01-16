@@ -6,11 +6,11 @@ module RailsTimeTravel
     end
 
     def set_datetime
-      if params[:days] == "reset"
+      if params[:seconds] == "reset"
         Timecop.return
         session[:timecop_date] = nil
       else
-        session[:timecop_date] = params[:days].to_i.days.ago
+        session[:timecop_date] = params[:seconds].to_i.seconds.ago
       end
       redirect_to action: :index
     end

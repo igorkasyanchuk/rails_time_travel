@@ -1,21 +1,50 @@
-<h1>Manage#index</h1>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Rails / Time Travel
+        <%= link_to "https://github.com/igorkasyanchuk/rails_time_travel", target: '_blank' do %>
+          &nbsp;
+          <span class="icon is-small">
+            <i class="fab fa-github"></i>
+          </span>
+        <% end %>
+      </h1>
+    </div>
+  </div>
+</section>
 
-<p>
-  <strong>Current time:</strong>
-  <h1><%= l Time.now, format: :long %></h1>
-</p>
+<section class="mb-4">
+  <p class="heading"> Current time</p>
+  <p class="title"><%= Time.now %></p>
+</section>
 
-<p>
-  <%= button_to "reset", action: :set_datetime, days: "reset", method: :post %>
-  <%= button_to "-5 days", action: :set_datetime, days: 5 %>
-  <%= button_to "-15 days", action: :set_datetime, days: 15 %>
-  <%= button_to "-50 days", action: :set_datetime, days: 50 %>
-  <%= button_to "-100 days", action: :set_datetime, days: 100 %>
-  <%= button_to "-365 days", action: :set_datetime, days: 365 %>
-</p>
+<div class="buttons">
+  <% [5, 10, 20, 30, 40, 50, 60].each do |e| %>
+    <%= button_to "-#{pluralize e, 'second'}", { action: :set_datetime, seconds: e.seconds.to_i }, { class: "button is-light" } %>
+  <% end %>
+</div>
 
+<div class="buttons">
+  <% [1, 2, 5, 10, 20, 30, 50, 60, 100].each do |e| %>
+    <%= button_to "-#{pluralize e, 'minute'}", { action: :set_datetime, seconds: e.minutes.to_i }, { class: "button is-info" } %>
+  <% end %>
+</div>
 
-<br/>
+<div class="buttons">
+  <% [1, 2, 5, 10, 20, 30, 50, 100, 365].each do |e| %>
+    <%= button_to "-#{pluralize e, 'day'}", { action: :set_datetime, seconds: e.days.to_i }, { class: "button is-success" } %>
+  <% end %>
+</div>
 
-session[:timecop_date] ->
-<%= debug session[:timecop_date] %>
+<div class="buttons">
+  <% [1, 2, 3, 5].each do |e| %>
+    <%= button_to "-#{pluralize e, 'year'}", { action: :set_datetime, seconds: e.year.to_i }, { class: "button is-warning" } %>
+  <% end %>
+</div>
+
+<% if session[:timecop_date].present? %>
+  <div class="buttons">
+    <%= button_to "reset time", { action: :set_datetime,  seconds: "reset" }, { class: 'button is-danger' } %>
+  </div>
+<% end %>

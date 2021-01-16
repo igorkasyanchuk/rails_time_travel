@@ -13,8 +13,8 @@ module RailsTimeTravel
     end
 
     def time_travel
-      logger.info 'TIME TRAVEL START'
       if session[:timecop_date]
+        logger.info "TIME TRAVEL START: #{session[:timecop_date]}"
         Timecop.travel(session[:timecop_date])
       else
         Timecop.return

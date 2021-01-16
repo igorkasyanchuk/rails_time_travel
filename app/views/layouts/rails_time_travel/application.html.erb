@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rails time travel</title>
+    <title>Rails / Time Travel</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <style>
       <%= raw render('/rails_time_travel/shared/bulma') %>
 
       body {
-        padding-top: 50px;
+        background: #eee;
+        height: 100vh;
       }
+
+      #main {
+        padding-top: 100px;
+      }
+
+      #main .box {
+        padding: 3rem;
+      }
+
+      #main .hero-body {
+        padding-left: 0;
+        padding-top: 0;
+      }
+
+      #more_gems {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+
     </style>
   </head>
   <body>
 
-    <div class="container main">
-      <div class="notification is-primary">
+    <div class="container">
+      <div id="main">
         <div class="columns">
-          <div class="column">
+          <div class="column box is-success">
             <%= yield %>
           </div>
         </div>
       </div>
     </div>
+
+    <p id="more_gems">
+      <%= link_to "https://www.railsjazz.com/", target: '_blank' do %>
+        <%= raw("more gems &rarr;") %>
+      <% end %>
+    </p>
 
   </body>
 </html>
