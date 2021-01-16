@@ -1,7 +1,7 @@
 require_dependency "rails_time_travel/application_controller"
 
 module RailsTimeTravel
-  class ManageController < ApplicationController
+  class ManageController < RailsTimeTravel::ApplicationController
     def index
     end
 
