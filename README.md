@@ -6,12 +6,18 @@ Time travel with timecop for your Rails development (and staring env for example
 
 Very often you need to create objects or other things in the "past". With thins gem and excellent `timecop` gem you can freeze time to any date/time.
 
+For developers & QA's.
+
 ## Usage
+
+Open `/rails/time_travel` to see
 
 [<img src="https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/time_travel.png?raw=true"
 />](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/time_travel.png?raw=true)
 
-When gem is added in your app - simply open `/rails/time_travel/` and adjust datetime. Once you are done - just reset time (you will see a red button).
+Now you can adjust the datetime. Once you are done - just reset time (you will see a red button).
+
+Note, that this datetime change is related only to your session.
 
 ## Installation
 
