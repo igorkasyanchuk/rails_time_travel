@@ -5,6 +5,3 @@ require "timecop"
 
 module RailsTimeTravel
 end
-
-require "rails_time_travel/routes"
-
