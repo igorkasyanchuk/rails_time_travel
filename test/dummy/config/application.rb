@@ -18,6 +18,6 @@ module Dummy
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.hosts.clear
+    config.hosts.clear if config.respond_to?(:hosts)
   end
 end
