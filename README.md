@@ -1,34 +1,42 @@
-# RailsTimeTravel
+# Rails Time Travel
 
 ![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/MiniTest/badge.svg)
 
-Short description and motivation.
+Time travel with timecop for your Rails development (and staring env for example).
+
+Very often you need to create objects or other things in the "past". With thins gem and excellent `timecop` gem you can freeze time to any date/time.
 
 ## Usage
-How to use my plugin.
+
+[<img src="https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/time_travel.png?raw=true"
+/>](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/time_travel.png?raw=true)
+
+When gem is added in your app - simply open `/rails/time_travel/` and adjust datetime. Once you are done - just reset time (you will see a red button).
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_time_travel'
+group :development do
+  gem 'rails_time_travel'
+end
 ```
 
-And then execute:
-```bash
-$ bundle
-```
+## Limitations
 
-Or install it yourself as:
-```bash
-$ gem install rails_time_travel
-```
+This approach has all limitation which timecop has. In addition it won't work on your background jobs or SQL's with `NOW()`, because this gem doesn't change system time and background job is a separate process.
 
 ## Contributing
 
 * `BUNDLE_GEMFILE=gemfiles/rails_6_1.gemfile bundle exec rake test` to run for Rails 6.1
 * `BUNDLE_GEMFILE=gemfiles/rails_6_0.gemfile bundle exec rake test` to run for Rails 6.0
 * `BUNDLE_GEMFILE=gemfiles/rails_5_2.gemfile bundle exec rake test` to run for Rails 5.2
+
+## TODO
+
+- jump to a specific date time with datetime picker?
+- CI for Rails 4.X
 
 ## Credits
 
