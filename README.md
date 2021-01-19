@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/MiniTest/badge.svg)
 
-Time travel with timecop for your Rails development (and staring env for example).
+Time travel with `timecop` for your Rails app (in development, staging or other env).
 
 Very often you need to create objects or other things in the "past". With thins gem and excellent `timecop` gem you can freeze time to any date/time.
 
@@ -25,13 +25,14 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-  gem 'rails_time_travel'
+  gem 'rails_time_travel' # you can also use it on staging env or production
 end
 ```
 
 ## Limitations
 
-This approach has all limitation which timecop has. In addition it won't work on your background jobs or SQL's with `NOW()`, because this gem doesn't change system time and background job is a separate process.
+- this approach has all limitation which timecop has. In addition it won't work on your background jobs or SQL's with `NOW()`, because this gem doesn't change system time and background job is a separate process.
+- selected datetime is static, it means that value is freezed, if you need to change it you need to reset or adjust it with buttons
 
 ## Contributing
 
@@ -41,8 +42,11 @@ This approach has all limitation which timecop has. In addition it won't work on
 
 ## TODO
 
-- jump to a specific date time with datetime picker?
+- jump to a specific datetime with datetime picker?
 - CI for Rails 4.X
+- protect with password (for example how I did in rails_performance gem)
+- go the the future?
+- make datetime not static? (use lambda)
 
 ## Credits
 
