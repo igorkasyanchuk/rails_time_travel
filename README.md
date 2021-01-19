@@ -1,6 +1,8 @@
 # Rails Time Travel
 
 ![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/MiniTest/badge.svg)
+[![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
+
 
 Time travel with `timecop` for your Rails app (in development, staging or other env).
 
