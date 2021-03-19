@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/igorkasyanchuk/rails_time_travel/workflows/MiniTest/badge.svg)
 [![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
-
+[![https://www.patreon.com/igorkasyanchuk](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/patron.svg?raw=true)](https://www.patreon.com/igorkasyanchuk)
 
 Time travel with `timecop` for your Rails app (in development, staging or other env).
 
